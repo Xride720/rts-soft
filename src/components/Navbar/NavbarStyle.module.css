@@ -1,0 +1,81 @@
+.container {
+    background: #E5E5E5;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+}
+
+.title {
+    position: relative;
+    background: url('../../img/World’s\ Population.png') no-repeat center;
+    background-size: contain;
+    width: 270px;
+    height: 60%;
+}
+
+.icon {
+    position: absolute;
+    top: -.3rem;
+    right: .5rem;
+    background: url('../../img/globus.png') no-repeat center;
+    background-size: contain;
+    width: 1rem;
+    height: 1rem;
+}
+
+.sizeBtnCont {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    max-width: 300px;
+    min-width: 150px;
+    padding-right: 1rem;
+}
+
+.sizeBtn {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5px .5rem 0 .5rem;
+    margin: 0 1rem;
+    opacity: .8;
+    border-bottom: 3px solid #c96c6600;
+    height: calc(100% - 8px);
+    width: 60px;
+    cursor: pointer;
+}
+.sizeBtn:hover {
+    background: rgba(0, 0, 0, 0.04);
+}
+
+.sizeBtn.selected {
+    border-bottom: 3px solid #C96C66;
+}
+
+.like {
+    background: url('../../img/like.png') no-repeat center;
+    background-size: contain;
+    width: 1rem;
+    height: 1rem;
+}
+.selected .like {
+    background: url('../../img/like_select.png') no-repeat center;
+    background-size: contain;
+    width: 1rem;
+    height: 1rem;
+}
+
+@media (max-width: 584px) {
+    .container {
+        justify-content: center;
+    }
+    .title { 
+        display: none;
+    }
+    .sizeBtnCont {
+        padding-right: 0;
+    }
+}

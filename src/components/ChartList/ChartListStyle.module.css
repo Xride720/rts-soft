@@ -1,0 +1,88 @@
+.wrap {
+    width: 100%;
+    height: calc(100vh - 50px);
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.wrap.next {
+    left: -100vw;
+}
+
+.wrap.second {
+    flex-wrap: wrap;
+}
+.wrap.second>* {
+    width: 33%;
+    height: 54%;
+}
+
+.wrap.smart {
+    flex-wrap: wrap;
+    overflow-x: auto;
+}
+.wrap.smart>* {
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+}
+
+.container {
+    width: 100%;
+    height: calc(100vh - 50px);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.container.loading {
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 50px);
+}
+
+.loader {
+    background: url('../../img/loader.gif') no-repeat center;
+    background-size: cover;
+    width: 10rem;
+    height: 10rem;
+}
+
+.paginationCont {
+    position: fixed;
+    left: calc(50vw - 1.5rem);
+    bottom: 2rem;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.paginationBtn {
+    position: relative;
+    color: #fff;
+    cursor: pointer;
+}
+.paginationBtn.selected {
+    color: #C96C66;
+}
+
+.paginationBtn::before {
+    content: '';
+    position: absolute;
+    top: -.4rem;
+    left: -.45rem;
+    background: url('../../img/Subtract_disbale.png') no-repeat center;
+    background-size: contain;
+    width: 1.5rem;
+    height: 2rem;
+}
+.paginationBtn.selected::before {
+    content: '';
+    background: url('../../img/Subtract.png') no-repeat center;
+    background-size: contain;
+}
